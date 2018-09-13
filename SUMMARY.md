@@ -48,6 +48,7 @@
   * [快捷键](slide/shortcut.md)
   * [协作者](slide/collaborators.md)
   * [评论](slide/comment.md)
+  * [通用布局插件](slide/layouts.md)
 
 ---
 
