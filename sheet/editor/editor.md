@@ -47,6 +47,7 @@
 | `options.content`   | `string`      | 无     | 表格内容     |
 | `options.container` | `HTMLElement` | 无     | 表格渲染容器 |
 | `options.activeSheetId` | `string` | 可选     | 需激活的工作表 ID |
+| `options.userId` | `number` | 可选     | 当前用户 ID，用于历史插件展示 |
 
 ### getContent
 
