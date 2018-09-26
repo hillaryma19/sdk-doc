@@ -124,7 +124,7 @@ mention.on(Mention.events.HIDE, () => {})
 | ------------------- | --------------- | ------------------ |
 | `code`         | `Number`   |  错误编码，正常为0    |
 | `data`         | `object`   |  接口实际返回值    |
-| `data.file.children`         | `File[]`   |  最近使用文件列表    |
+| `data`         | `File[]`   |  最近使用文件列表    |
 
 * File
 
@@ -141,19 +141,15 @@ mention.on(Mention.events.HIDE, () => {})
 ``` JSON
 {
   "code": 0,
-  "data": {
-    "file": {
-      "children": [
-        {
-          "id": 0,
-          "guid": "string",
-          "name": "string",
-          "type": "string",
-          "updated_at": "2018-08-20T12:56:14.519Z"
-        }
-      ]
+  "data": [
+    {
+      "id": 0,
+      "guid": "string",
+      "name": "string",
+      "type": "string",
+      "updated_at": "2018-08-20T12:56:14.519Z"
     }
-  }
+  ]
 }
 ```
 
