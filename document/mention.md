@@ -59,7 +59,10 @@ mention.on(Mention.events.SEARCHBEFORE, () => {})
 // 搜索后
 mention.on(Mention.events.SEARCHAFTER, () => {})
 // 确认
-mention.on(Mention.events.COMPLETED, () => {})
+mention.on(Mention.events.COMPLETED, (data: {
+  type: 'user' | 'file',
+  data: User | File
+}) => {})
 // 下拉框显示
 mention.on(Mention.events.SHOW, () => {})
 // 下拉框隐藏
