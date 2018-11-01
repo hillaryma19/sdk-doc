@@ -1,6 +1,9 @@
 # 表格评论插件
 
-表格单元格评论插件
+表格单元格评论插件。此插件有数据处理(commentModel)和评论列表UI组件(commentList)两部分。有两种使用方式：
+- 无需自定义 UI：
+  使用现有的数据处理 model 和 UI 组件
+- 需自定义 UI：使用数据处理 model 与表格和 server 交互，自主实现 UI 控件
 
 ## 构造函数
 
@@ -33,7 +36,6 @@
       },
     })
 
-    comment.init()
   ```
 
 * 参数
@@ -61,8 +63,10 @@
 | `options.createCommentOptions.url` | `String` | 必选 | 新建评论 api url |
 | `options.createCommentOptions.method` | `POST` | 可选 | 新建评论 api method |
 
-## 方法列表
-
+## 第一种使用方式： 无需自定义 UI
+```
+    comment.init()
+```
 ### init
 
 初始化评论数据处理和列表实例
@@ -71,7 +75,15 @@
 * 用法 `comment.init()`
 * 参数 无
 
-### initModel
+
+## 第二种使用方式： 需自定义 UI
+需自定义 UI 时，只需初始化 commentModel 组件
+```
+  comment.initModel()
+```
+
+### 方法列表
+#### initModel
 
 初始化评论数据处理实例, 该实例可操作评论 changeset, 请求评论数据，修改评论框样式，绑定／触发自定义事件
 
@@ -224,18 +236,33 @@ comment.commentModel.cancel({
 | `row`   | `Number`      | 必选     | 当前行 |
 | `col`   | `Number`      | 必选     | 当前列 |
 
-#### 自定义事件 updateComment
+### 自定义事件 updateComment
 
-当评论列表发生变化时发生此事件，可监听此事件获取最新评论列表
+当评论列表发生变化时发生此事件，可监听此事件获取当前所有评论数据的列表。
 * 用法
 ```
 comment.commentModel.on('updateComment', (commentList) => {})
 ```
 
-### initList
+### 帮助方法
+commentModel 中的数据结构以 selectionGuid 与单元格评论的行／列相关，但并不直接包含 row/col 相关字段。这是因为，表格的行列会发生变化。需要定位评论在表格中的位置需要即时获取.因此评论插件提供静态成员变量 Utils ，提供一系列帮助方法。
+```
+  comment.Utils.commentsBySelectionGuid
+```
 
-初始化评论列表实例
+#### commentsBySelectionGuid
 
-* 返回 `CommentList`
-* 用法 `commentList = comment.initList()`
-* 参数 无
+  根据 selection_guid 获取评论列表
+
+#### commentsByRowAndCol
+
+  根据 行／列 获取评论列表
+
+#### cellBySelectionGuid
+  根据 selection_guid 获取评论所在单元格
+
+#### sheetComments
+  获取当前 sheet 中的评论列表，包含当前行／列信息
+
+#### editorComments
+  获取当前 editor 中的评论列表，包含当前行／列信息
