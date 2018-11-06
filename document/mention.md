@@ -178,7 +178,7 @@ mention.on(Mention.events.HIDE, () => {})
 | `data.recent_contact.results`         | `User[]`   |  最近联系人搜索结果    |
 | `data.team_member.results`         | `User[]`   |  用户所在组搜索结果    |
 | `data.collaborator.results`         | `User[]`   |  当前文件协作者搜索结果    |
-| `data.file_name.results`         | `File[]`   |  文件名搜索结果    |
+| `data.file_name.results`         | `FileObject[]`   |  文件名搜索结果    |
 
 * User
 
@@ -200,6 +200,13 @@ mention.on(Mention.events.HIDE, () => {})
 | `type`         | `String`   |  文件类型 `folder, docs, sheet, slide`    |
 | `guid`         | `String`   |  用户GUID    |
 | `updated_at`         | `Date`   |  文件更新时间    |
+
+* FileObject
+
+| 名称                | 类型             | 描述                |
+| ------------------- | --------------- | ------------------ |
+| `source`         | `File`   |  文件信息   |
+
 
 * 返回值示例
 
@@ -258,11 +265,13 @@ mention.on(Mention.events.HIDE, () => {})
       "pageCount": 0,
       "results": [
         {
-          "id": 0,
-          "guid": "string",
-          "name": "string",
-          "type": "string",
-          "updated_at": "2018-08-20T13:10:39.847Z"
+          source: {
+            "id": 0,
+            "guid": "string",
+            "name": "string",
+            "type": "string",
+            "updated_at": "2018-08-20T13:10:39.847Z"
+          }
         }
       ]
     }
