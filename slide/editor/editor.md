@@ -107,7 +107,7 @@
 | `editorLayers.canvas` | `HTMLElement` |画布 dom|
 | `previewLayers` | `Object` |预览插件层|
 | `previewLayers.viewport` | `HTMLElement` |可视区域 dom|
-| `previewLayers..canvas` | `HTMLElement` |画布 dom|
+| `previewLayers.canvas` | `HTMLElement` |画布 dom|
 
   * 用法 `registerPlugin(name, plugin)`
   * 参数
@@ -259,7 +259,10 @@
 |名称|类型|默认值|描述|必选/可选|
 | -- | -- | -- | -- | -- |
 | `styles` | `Object` | 无 | 样式选项 |必选|
-| `applyToAll` | `boolean` | false | 是否应用到整个文本框 |可选|
+| `applyToAllLines` | `boolean` | false | 是否应用于所有内容 |可选|
+| `applyToGlobal` | `boolean` | false | 是否应用到文本元素全局 |可选|
+| `toggle` | `boolean` | false | 是否取消当前元素与 styles 里数值相等的样式 |可选|
+| `isPreset` | `boolean` | false | 是否为预设的快捷样式 |可选|
 
 ### setCurrentTextAutoResize
   设置当前选中文本内文字自适应。
@@ -307,6 +310,13 @@
 | -- | -- | -- | -- | -- |
 | `slideTransition` | `Editor.slideTransition` | 无 | 转场效果常量 |必选|
 | `slideIds` | `string[]` | 无 | 如果提供此参数，则改变特定的 slide 的转场效果；如果不提供此参数，则全局应用转场效果 |可选|
+
+### groupElements
+  组合选中的元素
+
+  * 返回 `undefined`
+  * 用法 `Editor.groupElements()`
+  * 参数 无
 
 ## 事件列表
 
