@@ -1,5 +1,9 @@
 # 石墨文档思维导图 SDK
 
+## 注意事项
+
+需要额外引入 vue 依赖。
+
 ## 构造函数
 
 - 用法
@@ -32,6 +36,7 @@
 | `options.readable`    | `Boolean`     | false  | 可读             |
 | `options.commentable` | `Boolean`     | false  | 可评论           |
 | `options.editable`    | `Boolean`     | false  | 可编辑           |
+| `options.selectable`  | `Boolean`     | false  | 可选择           |
 
 ### renderSheet
 
@@ -96,3 +101,4 @@
 | 名称    | 类型    | 默认值 | 描述 |
 | ------- | ------- | ------ | ---- |
 | `delta` | `Delta` | 无     | 数据 |
+
