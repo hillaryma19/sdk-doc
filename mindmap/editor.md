@@ -2,21 +2,25 @@
 
 ## 注意事项
 
-需要额外引入 vue 依赖。
+1. 需要额外引入 vue 依赖。
+2. 默认输出的 SMMindmap 就是四件套通常意义上的`Editor`
 
 ## 构造函数
 
 - 用法
 
   ```js
-  new SMMindmap.Editor(options)
+  new SMMindmap({
+    file:
+      '1b:19!11@Z00000001q#h:g!b@D8:7!4!中心主题 0["C*0"] 0 1["$aautoLayout1","$crootTopicIds:00000001"]',
+  })
   ```
 
 - 参数
 
-| 名称           | 类型           | 默认值                                                                                                | 描述                       |
-| -------------- | -------------- | ----------------------------------------------------------------------------------------------------- | -------------------------- |
-| `options.file` | `modoc string` | `'1b:19!11@Z00000001q#h:g!b@D8:7!4!中心主题 0["C*0"] 0 1["$aautoLayout1","$crootTopicIds:00000001"']` | 设置思维导图初始化渲染数据 |
+| 名称           | 类型           | 默认值 | 描述                       |
+| -------------- | -------------- | ------ | -------------------------- |
+| `options.file` | `modoc string` | 无     | 设置思维导图初始化渲染数据 |
 
 ## 方法列表
 
@@ -28,15 +32,15 @@
 - 用法 `render(container, options)`
 - 参数
 
-| 名称                  | 类型          | 默认值 | 描述             |
-| --------------------- | ------------- | ------ | ---------------- |
-| `container`           | `HTMLElement` | 无     | 思维导图渲染容器 |
-| `options`             | `Object`      | 无     | 渲染配置项       |
-| `options.open`        | `Boolean`     | false  | 公开或者协作     |
-| `options.readable`    | `Boolean`     | false  | 可读             |
-| `options.commentable` | `Boolean`     | false  | 可评论           |
-| `options.editable`    | `Boolean`     | false  | 可编辑           |
-| `options.selectable`  | `Boolean`     | false  | 可选择           |
+| 名称                  | 类型                 | 默认值 | 描述             |
+| --------------------- | -------------------- | ------ | ---------------- |
+| `container`           | `HTMLElement`        | 无     | 思维导图渲染容器 |
+| `options`             | `Object | undefined` | 无     | 渲染配置项       |
+| `options.open`        | `Boolean`            | false  | 公开或者协作     |
+| `options.readable`    | `Boolean`            | true   | 可读             |
+| `options.commentable` | `Boolean`            | false  | 可评论           |
+| `options.editable`    | `Boolean`            | false  | 可编辑           |
+| `options.selectable`  | `Boolean`            | true   | 可选择           |
 
 ### renderSheet
 
@@ -55,7 +59,7 @@
 设置文件内容
 
 - 返回 `void`
-- 用法 `setContent(content)`
+- 用法 `setContent('1b:19!11@Z00000001q#h:g!b@D8:7!4!中心主题 0["C*0"] 0 1["$aautoLayout1","$crootTopicIds:00000001"]')`
 - 参数
 
 | 名称      | 类型           | 默认值 | 描述             |
@@ -87,7 +91,7 @@
 四件套统一，切换可编辑模式
 
 - 返回 `void`
-- 用法 `updateOptions(options)
+- 用法 `updateOptions(options)`
 - 参数
 
 | 名称               | 类型      | 默认值 | 描述       |
