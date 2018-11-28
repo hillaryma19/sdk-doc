@@ -55,6 +55,13 @@
         <li><a href="/slide/collaborators.md/">协作者</a></li>
       </ul>
     </li>
+    <!-- 思维导图 -->
+    <li>
+      <h3><a href="/mindmap/readme.md/">思维导图(beta)</a></h3>
+      <ul class="doc-dashboard doc-detail-item">
+        <li><a href="/slide/editor.md/">编辑器</a></li>
+      </ul>
+    </li>
     <!-- 通用模块 -->
     <li>
       <h3><a href="/common/readme.md/">通用模块</a></h3>

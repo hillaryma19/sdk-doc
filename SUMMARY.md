@@ -52,6 +52,11 @@
 
 ---
 
+* [思维导图(beta)](mindmap/readme.md)
+  * [编辑器](mindmap/editor.md)
+
+---
+
 * [通用模块](common/readme.md)
   * [协同编辑](common/collaboration.md)
 
