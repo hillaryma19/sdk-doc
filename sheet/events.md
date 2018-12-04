@@ -20,7 +20,7 @@
   ```js
   var editor = new shimo.sdk.sheet.Editor()
   var events = shimo.sdk.sheet.Editor.events
-  editor.on(events.SheetSwitched, function(args) {
+  editor.on(events.SHEET_SWITCHED, function(args) {
     // your code
   })
   ```
@@ -31,3 +31,14 @@
 | ------------------ | --------- | ---------------- |
 | `args.newSheet` | `Sheet`  | 新激活的工作表 |
 | `args.oldSheet` | `Sheet`  | 旧工作表 |
+
+
+### 工作表列表更新事件
+
+  ```js
+  var editor = new shimo.sdk.sheet.Editor()
+  var events = shimo.sdk.sheet.Editor.events
+  editor.on(events.SHEET_TAB_LIST_UPDATED, function() {
+    // your code
+  })
+  ```
