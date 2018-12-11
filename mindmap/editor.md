@@ -36,15 +36,16 @@
 - 用法 `render(container, options)`
 - 参数
 
-| 名称                  | 类型                  | 默认值 | 描述             |
-| --------------------- | --------------------- | ------ | ---------------- |
-| `container`           | `HTMLElement`         | 无     | 思维导图渲染容器 |
-| `options`             | `Object or undefined` | 无     | 渲染配置项       |
-| `options.open`        | `Boolean`             | false  | 公开或者协作     |
-| `options.readable`    | `Boolean`             | true   | 可读             |
-| `options.commentable` | `Boolean`             | false  | 可评论           |
-| `options.editable`    | `Boolean`             | false  | 可编辑           |
-| `options.selectable`  | `Boolean`             | true   | 可选择           |
+| 名称                  | 类型                  | 默认值 | 描述                                          |
+| --------------------- | --------------------- | ------ | --------------------------------------------- |
+| `container`           | `HTMLElement`         | 无     | 思维导图渲染容器                              |
+| `options`             | `Object or undefined` | 无     | 渲染配置项                                    |
+| `options.open`        | `Boolean`             | false  | 公开或者协作                                  |
+| `options.readable`    | `Boolean`             | true   | 可读                                          |
+| `options.commentable` | `Boolean`             | false  | 可评论                                        |
+| `options.editable`    | `Boolean`             | false  | 可编辑                                        |
+| `options.selectable`  | `Boolean`             | true   | 可选择                                        |
+| `options.touchable`   | `Boolean`             | false  | 是否触屏，影响 tooltips 等和 hover 相关的功能 |
 
 ### renderSheet
 
