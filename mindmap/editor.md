@@ -1,6 +1,6 @@
 # 石墨文档思维导图 SDK
 
-版本号 0.2.0
+版本号 0.3.0
 
 ## 注意事项
 
@@ -30,22 +30,24 @@
 
 ### render
 
-渲染思维导图内容。
+渲染思维导图内容，返回一个 Promise，渲染完成后 resolve
 
-- 返回 `void`
-- 用法 `render(container, options)`
+- 返回 `Promise<undefined>`
+- 用法 `render(container, renderOptions, layoutOptions)`
 - 参数
 
-| 名称                  | 类型                  | 默认值 | 描述                                          |
-| --------------------- | --------------------- | ------ | --------------------------------------------- |
-| `container`           | `HTMLElement`         | 无     | 思维导图渲染容器                              |
-| `options`             | `Object or undefined` | 无     | 渲染配置项                                    |
-| `options.open`        | `Boolean`             | false  | 公开或者协作                                  |
-| `options.readable`    | `Boolean`             | true   | 可读                                          |
-| `options.commentable` | `Boolean`             | false  | 可评论                                        |
-| `options.editable`    | `Boolean`             | false  | 可编辑                                        |
-| `options.selectable`  | `Boolean`             | true   | 可选择                                        |
-| `options.touchable`   | `Boolean`             | false  | 是否触屏，影响 tooltips 等和 hover 相关的功能 |
+| 名称                        | 类型                  | 默认值 | 描述                                          |
+| --------------------------- | --------------------- | ------ | --------------------------------------------- |
+| `container`                 | `HTMLElement`         | 无     | 思维导图渲染容器                              |
+| `renderOptions`             | `Object or undefined` | 无     | 渲染配置项                                    |
+| `renderOptions.open`        | `Boolean`             | false  | 公开或者协作                                  |
+| `renderOptions.readable`    | `Boolean`             | true   | 可读                                          |
+| `renderOptions.commentable` | `Boolean`             | false  | 可评论                                        |
+| `renderOptions.editable`    | `Boolean`             | false  | 可编辑                                        |
+| `renderOptions.selectable`  | `Boolean`             | true   | 可选择                                        |
+| `renderOptions.touchable`   | `Boolean`             | false  | 是否触屏，影响 tooltips 等和 hover 相关的功能 |
+| `layoutOptions`             | `Object or undefined` | 无     | 布局配置项                                    |
+| `layoutOptions.toolbar`     | `Boolean`             | true   | 是否加载工具栏                                |
 
 ### renderSheet
 
@@ -57,6 +59,14 @@
 
 - 返回 `void`
 - 用法 `destroy()`
+- 参数 无
+
+### onceReady
+
+返回一个 Promise，渲染完成后 resolve
+
+- 返回 `Promise<undefined>`
+- 用法 `onceReady().then()`
 - 参数 无
 
 ### centerTopic
@@ -73,9 +83,9 @@
 
 ### setContent
 
-设置文件内容
+设置文件内容，返回一个 Promise，渲染完成后 resolve
 
-- 返回 `void`
+- 返回 `Promise<undefined>`
 - 用法 `setContent('1b:19!11@Z00000001q#h:g!b@D8:7!4!中心主题 0["C*0"] 0 1["$aautoLayout1","$crootTopicIds:00000001"]')`
 - 参数
 
@@ -93,9 +103,9 @@
 
 ### applyChange
 
-应用更新
+应用更新，返回一个 Promise，渲染完成后 resolve
 
-- 返回 `void`
+- 返回 `Promise<undefined>`
 - 用法 `applyChange(delta)`
 - 参数
 
@@ -105,9 +115,9 @@
 
 ### updateOptions
 
-四件套统一，切换可编辑模式
+四件套统一，切换可编辑模式，返回一个 Promise，渲染完成后 resolve
 
-- 返回 `void`
+- 返回 `Promise<undefined>`
 - 用法 `updateOptions(options)`
 - 参数
 
@@ -135,3 +145,10 @@
 | 名称    | 类型    | 默认值 | 描述 |
 | ------- | ------- | ------ | ---- |
 | `delta` | `Delta` | 无     | 数据 |
+
+### READY
+
+渲染结束，每次数据变更都会触发一次 READY 事件
+
+- 回调方法签名 `handler()`
+- 参数 无
