@@ -9,6 +9,14 @@
 ```js
 const Editor = shimo.sdk.document.Editor
 const editor = new Editor(options)
+editor.render(container, {
+  localeConfig: {
+    fetchLocaleSync: function (locale) {
+      return Editor.LocaleResources[locale]
+    },
+    locale: 'en-US',
+  }
+})
 ```
 
 * 参数
@@ -43,6 +51,8 @@ const editor = new Editor(options)
 | `modules`| `Object`      | 可选     | 是否启用工具栏     |
 | `modules.toolbar`| `Boolean / Object`      | 可选     | 是否启用工具栏     |
 | `modules.toolbar.parent`| `HTMLElement`      | 可选     | 工具栏父容器     |
+| `localeConfig.locale`| `String`      | 可选     | 语言配置，`en-US`, `zh-CN`     |
+| `localeConfig.fetchLocaleSync`| `Function`      | 可选     | 参数为locale，返回对应的翻译后的数据     |
 
 ### updateOptions
 
@@ -93,6 +103,13 @@ editor.getContent().then(content => {
 | 名称            | 类型     | 默认值 | 描述                      |
 | --------------- | -------- | ------ | ------------------------- |
 | `change`       | `String` | 无     | 修改文档的内容                  |
+
+### getLocale
+
+返回当前的语言环境字符串
+
+* 返回 `string`
+* 用法 `editor.getLocale()`
 
 ### destroy
 
