@@ -36,6 +36,7 @@
   * [评论](sheet/comment.md)
   * [右键菜单](sheet/contextMenu.md)
   * [事件](sheet/events.md)
+  * [打印](sheet/print.md)
 
 
 ---
