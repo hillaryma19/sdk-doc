@@ -34,6 +34,10 @@
       createCommentOptions: {
         url: `/api/comment/create?target_type=file&guid=${guid}`,
       },
+      fetchLocaleSync: (locale) => {
+        // 插件默认会将翻译资源打包在代码中，放在 window.shimo.sdk.sheet.plugins.CommentLocaleResources，也可以自己提供翻译资源
+        return window.shimo.sdk.sheet.plugins.CommentLocaleResources[locale]
+      }
     })
 
   ```
@@ -62,35 +66,9 @@
 | `options.createCommentOptions` | `Object` | 必选 | 新建评论配置 |
 | `options.createCommentOptions.url` | `String` | 必选 | 新建评论 api url |
 | `options.createCommentOptions.method` | `POST` | 可选 | 新建评论 api method |
-
-## 第一种使用方式： 无需自定义 UI
-```
-    comment.init()
-```
-### init
-
-初始化评论数据处理和列表实例
-
-* 返回 无
-* 用法 `comment.init()`
-* 参数 无
-
-
-## 第二种使用方式： 需自定义 UI
-需自定义 UI 时，只需初始化 commentModel 组件
-```
-  comment.initModel()
-```
+| `options.fetchLocaleSync` | `Function` | 可选 | 获取翻译资源的方式，默认使用插件内部提供的翻译资源 |
 
 ### 方法列表
-#### initModel
-
-初始化评论数据处理实例, 该实例可操作评论 changeset, 请求评论数据，修改评论框样式，绑定／触发自定义事件
-
-* 返回 `CommentModel`
-* 用法 `comment.initModel()`
-* 参数 无
-
 #### query
 
 获取表格内评论列表. 将触发 loadComments 事件

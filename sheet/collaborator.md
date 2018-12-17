@@ -13,10 +13,7 @@
     //使用协作者通用模块，启用协作者渲染功能
 
     var collaborator = new shimo.sdk.common.Collaborators({
-      editor: collaboratorEditor,
-      ws: [webSocket],
-      guid: [file的guid],
-      currentUserId: [当前编辑文档的用户id]
+      editor: collaboratorEditor
     })
 
     collaborator.start()

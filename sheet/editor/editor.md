@@ -18,6 +18,9 @@
 | `options.editable`                  | `Boolean` | `true` | 设置表格是否只读                  |
 | `options.commentable`               | `Boolean` | `true` | 是否允许单元格评论                |
 | `options.disableRenderOptimization` | `Boolean` | `true` | 是否禁用表格渲染优化              |
+| `options.localeConfig`              | `Object`  | 可选   | 国际化相关配置，如果未传，默认使用中文（zh-CN）  |
+| `options.localeConfig.fetchLocaleSync` | `String`  | 必选   | 获取翻译资源的方式  |
+| `options.localeConfig.locale`       | `String`  | 必选   |  设置当前要使用的语言，eg: 'en-US' | 
 | `options.uploadConfig`              | `Object`  | 可选   | 上传图片配置                      |
 | `options.uploadConfig.origin`       | `String`  | 必选   | 上传服务的地址                    |
 | `options.uploadConfig.server`       | `String`  | 必选   | 存储服务类型, eg, 'qinniu', 'aws' |
@@ -109,6 +112,20 @@ editor.undo().then(function() {
 editor.redo().then(function() {
   console.log("redo successed!");
 });
+```
+
+- 参数
+
+
+### getLocale
+
+获取当前语言。
+
+- 返回 `string`
+- 用法
+
+```js
+const currentLocale = editor.getLocale()  // eg: en-US、zh-CN
 ```
 
 - 参数
