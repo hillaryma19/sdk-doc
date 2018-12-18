@@ -37,7 +37,9 @@
   * [右键菜单](sheet/contextMenu.md)
   * [事件](sheet/events.md)
   * [打印](sheet/print.md)
-
+  * [图表](sheet/chart.md)
+  * [下拉填充](sheet/fill.md)
+  * [公式侧边栏](sheet/formulaSidebar.md)
 
 ---
 
