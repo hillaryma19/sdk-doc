@@ -6,7 +6,7 @@
 
   ```js
   var editor = new shimo.sdk.sheet.Editor()
-  const contextmenu = new window.shimo.sdk.sheet.plugins.Fill({
+  const fill = new window.shimo.sdk.sheet.plugins.Fill({
     editor: editor
   })
   ```

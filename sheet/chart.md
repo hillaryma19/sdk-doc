@@ -6,7 +6,7 @@
 
   ```js
   var editor = new shimo.sdk.sheet.Editor()
-  const contextmenu = new window.shimo.sdk.sheet.plugins.Chart({
+  const chart = new window.shimo.sdk.sheet.plugins.Chart({
     editor: editor
   })
   ```
