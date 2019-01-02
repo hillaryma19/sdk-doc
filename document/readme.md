@@ -14,5 +14,5 @@
   <li><a href="/document/comment.md/">评论</a></li>
   <li><a href="/document/mention.md/">mention</a></li>
   <li><a href="/document/uploader.md/">上传</a></li>
-  <li><a href="/document/keyboard.md/">快捷键</a></li>
+  <li><a href="/document/shortcut.md/">快捷键</a></li>
 </ul>

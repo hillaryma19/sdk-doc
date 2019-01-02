@@ -20,7 +20,7 @@
   * [评论](document/comment.md)
   * [mention](document/mention.md)
   * [上传](document/uploader.md)
-  * [快捷键](document/keyboard.md)
+  * [快捷键](document/shortcut.md)
 
 ---
 

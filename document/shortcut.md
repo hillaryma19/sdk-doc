@@ -8,9 +8,9 @@
 
 ```js
 const Editor = shimo.sdk.document.Editor
-const Keyboard = shimo.sdk.document.plugins.Keyboard
+const Shortcut = shimo.sdk.document.plugins.Shortcut
 const editor = new Editor()
-const keyboard = new Keyboard({
+const shortcut = new Shortcut({
   editor,
   plugins: {
     demoScreen: null,
@@ -21,7 +21,7 @@ const keyboard = new Keyboard({
 })
 
 editor.render(...)
-keyboard.render()
+shortcut.render()
 ```
 
 * 参数
@@ -41,11 +41,11 @@ keyboard.render()
 渲染初始化。
 
 * 返回 `undefined`
-* 用法 `keyboard.render()`
+* 用法 `shortcut.render()`
 
 ## destroy
 
 使用完销毁。
 
 * 返回 `undefined`
-* 用法 `keyboard.destroy()`
+* 用法 `shortcut.destroy()`
