@@ -38,6 +38,7 @@ comment.render()
 | `id` | `number` | 必选 | 用户唯一标识 |
 | `name` | `string` | 必选 | 用户昵称 |
 | `avatar` | `string` | 必选 | 用户头像路径 |
+| `teamId`         | `Number`   |  用户组ID    |
 
 * Service
 
@@ -53,7 +54,8 @@ comment.render()
 |名称|类型|默认值|描述|
 | -- | -- | -- | -- |
 | `service` | `MentionService` | 可选 | mention接口配置 |
-| `data` | `mentionData` | 可选 | mention数据配置 |
+| `user` | `User` | 必选 | 用户信息 |
+| `file` | `File` | 必选 | 文件信息 |
 
 * MentionService
 
@@ -63,13 +65,13 @@ comment.render()
 | `recentFiles` | `string` | 必选 | 最近使用文件 |
 | `searchApi` | `string` | 必选 | 搜索接口 |
 
-* mentionData
+* File
 
-|名称|类型|默认值|描述|
-| -- | -- | -- | -- |
-| `fileId` | `string` | 必选 | 文件id |
-| `fileTeamId` | `string` | 必选 | 文件组id |
-| `teamId` | `string` | 必选 | 用户组id |
+| 名称                | 类型             | 描述                |
+| ------------------- | --------------- | ------------------ |
+| `id`         | `Number`   |  文件ID   |
+| `guid`         | `String`   |  文件GUID    |
+| `teamId`         | `Number`   |  文件所属用户组ID    |
 
 ## 方法列表
 

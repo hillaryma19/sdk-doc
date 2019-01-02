@@ -24,7 +24,8 @@ const mention = new Mention({
 | `id` | `string` | 可选 | 容器id |
 | `scrollContainer` | `Element` | 可选 | 滚动容器 |
 | `service` | `Service` | 必选 | 接口配置 |
-| `data` | `Data` | 必选 | 数据配置 |
+| `user` | `User` | 必选 | 用户信息 |
+| `file` | `File` | 必选 | 文件信息 |
 
 * Service
 
@@ -34,13 +35,21 @@ const mention = new Mention({
 | `recentFiles` | `string` | 必选 | 最近使用文件 |
 | `searchApi` | `string` | 必选 | 搜索接口 |
 
-* Data
+* User
 
-|名称|类型|默认值|描述|
-| -- | -- | -- | -- |
-| `fileId` | `string` | 必选 | 文件id |
-| `fileTeamId` | `string` | 必选 | 文件组id |
-| `teamId` | `string` | 必选 | 用户组id |
+| 名称                | 类型             | 描述                |
+| ------------------- | --------------- | ------------------ |
+| `id`         | `Number`   |  用户ID   |
+| `teamId`         | `Number`   |  用户组ID    |
+
+* File
+
+| 名称                | 类型             | 描述                |
+| ------------------- | --------------- | ------------------ |
+| `id`         | `Number`   |  文件ID   |
+| `guid`         | `String`   |  文件GUID    |
+| `teamId`         | `Number`   |  文件所属用户组ID    |
+
 
 ## 方法列表
 
@@ -136,7 +145,7 @@ mention.on(Mention.events.HIDE, () => {})
 | `id`         | `Number`   |  文件ID   |
 | `name`         | `String`   |  文件名    |
 | `type`         | `String`   |  文件类型 `folder, docs, sheet, slide`    |
-| `guid`         | `String`   |  用户GUID    |
+| `guid`         | `String`   |  文件GUID    |
 | `updated_at`         | `Date`   |  文件更新时间    |
 
 * 返回值示例
@@ -198,7 +207,7 @@ mention.on(Mention.events.HIDE, () => {})
 | `id`         | `Number`   |  文件ID   |
 | `name`         | `String`   |  文件名    |
 | `type`         | `String`   |  文件类型 `folder, docs, sheet, slide`    |
-| `guid`         | `String`   |  用户GUID    |
+| `guid`         | `String`   |  文件GUID    |
 | `updated_at`         | `Date`   |  文件更新时间    |
 
 * FileObject
