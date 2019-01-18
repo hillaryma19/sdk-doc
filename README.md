@@ -42,6 +42,7 @@
         <li><a href="/sheet/contextMenu.md/">右键菜单</a></li>
         <li><a href="/sheet/events.md/">事件</a></li>
         <li><a href="/sheet/print.md/">打印</a></li>
+        <li><a href="/sheet/filter.md/">筛选</a></li>
       </ul>
     </li>
     <!-- 幻灯片 -->
