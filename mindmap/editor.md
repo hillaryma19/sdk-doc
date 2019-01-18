@@ -1,6 +1,6 @@
 # 石墨文档思维导图 SDK
 
-版本号 0.3.0
+版本号 0.4.0
 
 ## 注意事项
 
@@ -33,7 +33,7 @@
 渲染思维导图内容，返回一个 Promise，渲染完成后 resolve
 
 - 返回 `Promise<undefined>`
-- 用法 `render(container, renderOptions, layoutOptions)`
+- 用法 `render(container, renderOptions)`
 - 参数
 
 | 名称                        | 类型                  | 默认值 | 描述                                          |
@@ -46,8 +46,6 @@
 | `renderOptions.editable`    | `Boolean`             | false  | 可编辑                                        |
 | `renderOptions.selectable`  | `Boolean`             | true   | 可选择                                        |
 | `renderOptions.touchable`   | `Boolean`             | false  | 是否触屏，影响 tooltips 等和 hover 相关的功能 |
-| `layoutOptions`             | `Object or undefined` | 无     | 布局配置项                                    |
-| `layoutOptions.toolbar`     | `Boolean`             | true   | 是否加载工具栏                                |
 
 ### renderSheet
 
