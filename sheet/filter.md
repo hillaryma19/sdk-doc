@@ -13,7 +13,7 @@
     container: [表格渲染容器]
   })
 
-  new window.shimo.sdk.sheet.plugins.FitlerViewport({
+  new window.shimo.sdk.sheet.plugins.FilterViewport({
     editor: editor,
   })
 
