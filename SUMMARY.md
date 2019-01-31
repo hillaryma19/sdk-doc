@@ -40,6 +40,7 @@
   * [图表](sheet/chart.md)
   * [下拉填充](sheet/fill.md)
   * [公式侧边栏](sheet/formulaSidebar.md)
+  * [筛选](sheet/filter.md)
 
 ---
 
