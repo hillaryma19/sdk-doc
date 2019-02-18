@@ -16,7 +16,8 @@
 <html>
 <head>
   <!-- 引入 JavaScript 文件 -->
-  <script src="./shimo-sdk.document.js"></script>
+  <script src="./shimo.sdk.common.min.js"></script>
+  <script src="./shimo.sdk.document.editor.min.js"></script>
   <script>
   document.addEventListener("DOMContentLoaded", function () {
     // 初始化编辑器
