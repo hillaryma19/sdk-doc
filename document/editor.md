@@ -8,15 +8,15 @@
 
 ```js
 const Editor = shimo.sdk.document.Editor
-const editor = new Editor(options)
-editor.render(container, {
+const editor = new Editor({
   localeConfig: {
     fetchLocaleSync: function (locale) {
       return Editor.LocaleResources[locale]
     },
-    locale: 'en-US',
+    locale: 'en-US'
   }
 })
+editor.render(container)
 ```
 
 * 参数
@@ -25,6 +25,9 @@ editor.render(container, {
 | ------------------ | --------- | ------- | ---------------- |
 | `readOnly` | `Boolean` | `false` | 设置文档是否只读 |
 | `id`| `number`      | 必选     | 用户ID     |
+| `localeConfig`| `Object`      | 可选     | 国际化相关配置，如果未传，默认使用中文（zh-CN） |
+| `localeConfig.locale`| `String`      | 可选     | 语言配置，`en-US`   |
+| `localeConfig.fetchLocaleSync`| `Function`      | 可选     | 参数为locale，返回对应的翻译后的数据     |
 
 ## 方法列表
 
@@ -51,8 +54,6 @@ editor.render(container, {
 | `modules`| `Object`      | 可选     | 是否启用工具栏     |
 | `modules.toolbar`| `Boolean / Object`      | 可选     | 是否启用工具栏     |
 | `modules.toolbar.parent`| `HTMLElement`      | 可选     | 工具栏父容器     |
-| `localeConfig.locale`| `String`      | 可选     | 语言配置，`en-US`, `zh-CN`     |
-| `localeConfig.fetchLocaleSync`| `Function`      | 可选     | 参数为locale，返回对应的翻译后的数据     |
 
 ### updateOptions
 
