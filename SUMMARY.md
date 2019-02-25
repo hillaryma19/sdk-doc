@@ -16,7 +16,6 @@
   * [演示模式](document/demoscreen.md)
   * [历史](document/history.md)
   * [版本](document/revision.md)
-  * [协作者](document/collaborator.md)
   * [评论](document/comment.md)
   * [mention](document/mention.md)
   * [上传](document/uploader.md)
@@ -31,7 +30,6 @@
     * [工作表](sheet/editor/sheet.md)
   * [工具栏](sheet/toolbar.md)
   * [快捷键](sheet/shortcut.md)
-  * [协作者](sheet/collaborator.md)
   * [历史侧边栏](sheet/historySidebar.md)
   * [评论](sheet/comment.md)
   * [右键菜单](sheet/contextMenu.md)
@@ -51,7 +49,6 @@
   * [侧边栏](slide/sidebar.md)
   * [幻灯片列表](slide/filmstrip.md)
   * [快捷键](slide/shortcut.md)
-  * [协作者](slide/collaborators.md)
   * [评论](slide/comment.md)
   * [通用布局插件](slide/layouts.md)
 
