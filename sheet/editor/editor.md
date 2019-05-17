@@ -23,7 +23,7 @@
 | `options.localeConfig.locale`       | `String`  | 必选   |  设置当前要使用的语言，eg: 'en-US' | 
 | `options.uploadConfig`              | `Object`  | 可选   | 上传图片配置                      |
 | `options.uploadConfig.origin`       | `String`  | 必选   | 上传服务的地址                    |
-| `options.uploadConfig.server`       | `String`  | 必选   | 存储服务类型, eg, 'qinniu', 'aws' |
+| `options.uploadConfig.server`       | `String`  | 必选   | 存储服务类型, eg, 'oss', 'aws' |
 | `options.uploadConfig.token`        | `String`  | 必选   | 上传服务鉴权秘钥                  |
 | `options.downloadConfig`            | `Object`  | 可选   | 下载图片配置                      |
 | `options.downloadConfig.origin`     | `String`  | 必选   | 下载服务的地址                    |
