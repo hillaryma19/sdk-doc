@@ -15,6 +15,21 @@
   })
   ```
 
+### 表格出现异常事件
+  ```js
+  var editor = new shimo.sdk.sheet.Editor()
+  var events = shimo.sdk.sheet.Editor.events
+  editor.on(events.ERROR, function(msg) {
+    // 表格出错后请中断编辑，刷新后继续使用
+  })
+  ```
+* 表格出现异常事件参数
+
+| 名称               | 类型        | 描述             |
+| ------------------ | --------- | ---------------- |
+| `msg` | `String`  | 错误原因 |
+
+
 ### 切换工作表事件
 
   ```js
