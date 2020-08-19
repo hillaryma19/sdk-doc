@@ -27,6 +27,7 @@
         <li><a href="/document/gallery.md/">相册</a></li>
         <li><a href="/document/demoscreen.md/">演示模式</a></li>
         <li><a href="/document/shortcut.md/">快捷键</a></li>
+        <li><a href="/document/mobile.md/">移动端</a></li>
       </ul>
     </li>
     <!-- 表格 -->

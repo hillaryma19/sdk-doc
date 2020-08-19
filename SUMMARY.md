@@ -20,6 +20,7 @@
   * [mention](document/mention.md)
   * [上传](document/uploader.md)
   * [快捷键](document/shortcut.md)
+  * [移动端](document/mobile.md)
 
 ---
 

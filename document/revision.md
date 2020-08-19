@@ -32,6 +32,7 @@ const revision = new Revision({
 | `length` | `string` | 可选 | 获取版本列表长度接口 |
 | `fetch` | `string` | 可选 | 获取版本列表接口 |
 | `fetchTitle` | `string` | 可选 | 获取版本标题接口 |
+| `fetchSnapshot` | `string` | 可选 | 获取某版本快照内容接口 |
 | `fetchContent` | `string` | 可选 | 获取版本内容接口 |
 | `generate` | `string` | 可选 | 保存版本接口 |
 | `revert` | `string` | 可选 | 恢复到版本接口 |

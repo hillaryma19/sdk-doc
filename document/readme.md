@@ -15,4 +15,5 @@
   <li><a href="/document/mention.md/">mention</a></li>
   <li><a href="/document/uploader.md/">上传</a></li>
   <li><a href="/document/shortcut.md/">快捷键</a></li>
+  <li><a href="/document/mobile.md/">移动端</a></li>
 </ul>
