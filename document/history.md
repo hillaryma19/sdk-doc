@@ -28,8 +28,6 @@ const history = new History({
 
 |名称|类型|默认值|描述|
 | -- | -- | -- | -- |
-| `snapshot` | `string` | 可选 | 获取某条历史快照内容的接口 |
-| `steps` | `string` | 可选 | 按范围获取逐条历史更新内容的接口 |
 | `fetch` | `string` | 可选 | 获取历史列表的接口 |
 | `revert` | `string` | 可选 | 还原某一历史接口 |
 | `user` | `string` | 可选 | 根据id列表获取用户详细信息接口 |
