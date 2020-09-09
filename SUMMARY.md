@@ -40,6 +40,11 @@
   * [下拉填充](sheet/fill.md)
   * [公式侧边栏](sheet/formulaSidebar.md)
   * [筛选](sheet/filter.md)
+  * [mobile底部sheet栏](sheet/mobileSheetTab.md)
+  * [数据验证](sheet/dataValidation.md)
+  * [条件格式](sheet/conditionFormat.md)
+  * [数据透视表](sheet/pivotTable.md)
+  * [表格基础功能插件](sheet/basicPlugins.md)
 
 ---
 
