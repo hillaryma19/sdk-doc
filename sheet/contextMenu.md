@@ -8,12 +8,18 @@
 
   ```js
   var editor = new shimo.sdk.sheet.Editor()
-  const contextmenu = new window.shimo.sdk.sheet.plugins.ContextMenu({
-    editor: editor
-  })
-  contextmenu.render({
-    container: document.getElementById('contextmenu')
-  })
+  // 移动端和pc端是两个不同的插件
+  if (isMobile) {
+    new window.shimo.sdk.sheet.plugins.MobileContextmenu({ editor })
+  } else {
+    const contextmenu = new window.shimo.sdk.sheet.plugins.ContextMenu({
+      editor: editor
+    })
+    contextmenu.render({
+      container: [表格右键菜单容器]
+    })  
+  }
+  
   ```
 
 * 参数

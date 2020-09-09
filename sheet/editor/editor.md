@@ -19,14 +19,18 @@
 | `options.commentable`               | `Boolean` | `true` | 是否允许单元格评论                |
 | `options.disableRenderOptimization` | `Boolean` | `true` | 是否禁用表格渲染优化              |
 | `options.localeConfig`              | `Object`  | 可选   | 国际化相关配置，如果未传，默认使用中文（zh-CN）  |
-| `options.localeConfig.fetchLocaleSync` | `String`  | 必选   | 获取翻译资源的方式  |
-| `options.localeConfig.locale`       | `String`  | 必选   |  设置当前要使用的语言，eg: 'en-US' | 
+| `options.localeConfig.fetchLocaleSync` | `String`  | 可选   | 获取翻译资源的方式  |
+| `options.localeConfig.locale`       | `String`  | 可选   |  设置当前要使用的语言，eg: 'en-US' | 
 | `options.uploadConfig`              | `Object`  | 可选   | 上传图片配置                      |
 | `options.uploadConfig.origin`       | `String`  | 必选   | 上传服务的地址                    |
 | `options.uploadConfig.server`       | `String`  | 必选   | 存储服务类型, eg, 'oss', 'aws' |
 | `options.uploadConfig.token`        | `String`  | 必选   | 上传服务鉴权秘钥                  |
 | `options.downloadConfig`            | `Object`  | 可选   | 下载图片配置                      |
-| `options.downloadConfig.origin`     | `String`  | 必选   | 下载服务的地址                    |
+| `options.spellCheck`                | `Boolean` | 可选   | 是否开启拼写检查，默认不开启      |
+| `options.fontConfig`                | `Object`  | 可选   | 字体配置                |
+| `options.fontConfig.baseUrl`        | `String`  | 可选   | 下载字体的地址                    |
+| `options.fontConfig.fontNames`      | `Object`  | 可选   | 字体文件名（地址+文件名）即为完整路径    |
+| `options.user`                      | `Object`  | 必选   | 当前用户    |
 
 ## 属性列表
 

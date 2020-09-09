@@ -12,9 +12,16 @@
     content: [表格内容],
     container: [表格渲染容器]
   })
-
-  var toolbar = new shimo.sdk.sheet.plugins.Toolbar({ editor })
-  toolbar.render({
-    container: [表格工具栏容器]
-  })
+  // 移动端和pc端是两个不同的插件
+  if (isMobile) {
+    new shimo.sdk.sheet.plugins.MobileToolbar({
+      editor,
+      container: [表格工具栏容器]
+    })
+  } else {
+    var toolbar = new shimo.sdk.sheet.plugins.Toolbar({ editor })
+    toolbar.render({
+      container: [表格工具栏容器]
+    })
+  }
   ```

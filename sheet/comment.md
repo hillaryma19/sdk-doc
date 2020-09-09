@@ -28,7 +28,7 @@
         url: `/api/comment/delete/{comment-id}`,
       },
       closeCommentOptions: {
-        url: `/api/comment/closeComments`,
+        url: `/api/comment/close/{selectionGuid}`,
       },
       createCommentOptions: {
         url: `/api/comment/create?target_type=file&guid=${guid}`,
