@@ -14,9 +14,4 @@
   <li><a href="/sheet/events.md/">事件</a></li>
   <li><a href="/sheet/print.md/">打印</a></li>
   <li><a href="/sheet/filter.md/">筛选</a></li>
-  <li><a href="/sheet/mobileSheetTab.md/">mobile底部sheet栏</a></li>
-  <li><a href="/sheet/dataValidation.md/">数据验证</a></li>
-  <li><a href="/sheet/conditionFormat.md/">条件格式</a></li>
-  <li><a href="/sheet/pivotTable.md/">数据透视表</a></li>
-  <li><a href="/sheet/basicPlugins.md/">表格基础功能插件</a></li>
 </ul>
