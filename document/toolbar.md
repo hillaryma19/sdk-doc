@@ -149,7 +149,7 @@ editor.editorActions.setBold()
 
 设置有序列表。
 
-* 用法 `editor.editorActions.setBold(?value)`
+* 用法 `editor.editorActions.setOrdered(?value)`
 * 参数
 
 | 名称             | 可选值           | 描述         |
