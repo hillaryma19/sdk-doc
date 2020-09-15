@@ -30,6 +30,8 @@ comment.render()
 | `service` | `Service` | 可选 | 接口配置 |
 | `mentionable` | `boolean` | 默认为true | 是否开启 @ 功能 |
 | `mention` | `MentionOptions` | 可选 | @ 功能所需参数 |
+| `hasPanel` | `boolean`| `true` | 是否展示评论卡片 |
+| `hasGenerator` | `boolean` | `true` | 是否展示添加评论的按钮 |
 
 * User
 
